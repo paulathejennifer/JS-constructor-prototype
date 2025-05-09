@@ -51,12 +51,14 @@ switch(featureToggle.canAccess(userRole)){
 
 const user1 = new FeatureToggle("Light mode", false, ["admin", "data analyst"])
 
-console.log("Before enabling feature");
+
+
+console.log("Before enabling feature:");
 simulateAccess(user1, "admin")
 simulateAccess(user1, "beta tester")
 simulateAccess(user1, "data analyst")
 
-console.log("After enabling feature");
+console.log("After enabling feature:");
 
 user1.toggleFeature(true)
 
@@ -65,8 +67,7 @@ simulateAccess(user1, "beta tester")
 simulateAccess(user1, "data analyst")
 
 
-const name = "Jennifer"
-console.log(name);
+
 
 //Question 2
 //pseudocode
@@ -139,7 +140,7 @@ function getWeekNumber(date){
 )
 }
 
-const project = {name:"We development", hourlyRate:50}
+const project = {name:"Web development", hourlyRate:50}
 const timelog = new TimeLog("Jeniifer Chinyere", project)
 
 timelog.addLog("2025-05-03", 7)
@@ -324,7 +325,7 @@ Course.prototype.instructorMessage = function(){
         
     };
     if (studentCount > 0){
-        console.log(`Instructor ${this.instructor.name}, you have (${studentCount}) enrolled in the  "${this.title}" course.Keep up`);
+        console.log(`Instructor ${this.instructor.name}, you have (${studentCount}) students enrolled in the  "${this.title}" course.Keep up`);
         
     }
     else{
@@ -347,7 +348,7 @@ const students = [
 const course = new Course("Introduction to Machine learning" ,instructor, students)
 console.log("Completed students:" ,course.getCompletedStudents());
 
-console.log("Web development students:",course.countStudentsByExpertise("Web development"));
+console.log("Web development students:", course.countStudentsByExpertise("Web development"));
 course.instructorMessage()
 
 
