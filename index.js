@@ -1,6 +1,11 @@
 //Question 1
 //pseudocode
-
+//1.Create a constructor function FeatureToggle initialized with featureName, isEnabled and userGroupAccess
+//2.Create prototype method, canAccess to check if the feature is isEnabled
+//3.Create prototype method called toggleFeature to check the state of feature and return a Boolean
+//4.Simulate access usin if...else and switch statements for different roles
+//5.Log the results
+//6.Show the behavior of feature toggling and access control for differnt roles before and after enabling the feature
 
 
 function FeatureToggle(featureName, isEnabled, userGroupAccess){
@@ -65,6 +70,15 @@ console.log(name);
 
 //Question 2
 //pseudocode
+//1.Create a constructor function called TimeLog with two parameters
+ //freeLancerName:Stores the name and projectDetails:An object containing the project name and hourly rate
+ //initialize an empty Array, logs to store objects of work sessions
+
+ //2.Prototype methods
+ //addLog() with date and hoursWorked as key arguments: Adds a new log entered
+ //calculateTotalEarnings() calculates total earnings by summing up the hoursWorked from the logs and them multiplying by the hourly rate
+ //filterLogsByTheirRange() filters takes in the starting date and the ending date to filter logs based on whether the date is within the given Range
+ //weeklyHoursThatExceeded() checks if the total hoursworked in any week exceeded 40 by grouping logs into weeks and summing their hours
 
 function TimeLog(freeLancerName, projectDetails){
     this.freeLancerName= freeLancerName;
@@ -143,6 +157,15 @@ console.log("Weekly hours exceeded by 40:", exceeds40);
 
 //Question 3
 //pseudocode
+//1.Create a constructor function,Order which takes in the specified parameters; customer, items and status
+//2.customer: contains customerdetails as an object with name and emailitems: an array of objects each representing a product with product name, quantity and a  unit price 
+//3.A string representing the current order status such as "payment paid"
+//4.Create prototype methods:
+//totalCost(), loops through the items array and calculates total by multiplying quantity and price for each 
+//updateStatues takes isPaid as the only argument and returns a Boolean
+//categorizeByUrgency uses a switch statement to categorize urgency based on their status property
+
+
 function Order(customer, items, status){
     this.customer = customer;
     this.items = items;
@@ -206,6 +229,14 @@ console.log("Order Status:", order.updateStatus(true));
 
 
 //Question 4
+//pseudocode
+//1.create a constructor function, Employee which takes in employee id ,name, an object containing key performances, with numbers values representing scores
+//feedback: an array of feedback strings initialized as an empty array
+//2. Prototype methods
+//calcculateAverageMarks() to calculate the average of all performance metric values using Object.values() and the reduce method to sum
+//classifyPerformanceLevel() which uses control flow if...else to classify performance scores into levels
+//addFeedback() adds new feedback if it was not there earlier
+
 function Employee(id, name, performanceMetrics, feedback){
     this.id = id;
     this.name = name;
@@ -260,6 +291,14 @@ console.log("Updated feedback:", employee.feedback);
 
 //Question 5
 //pseudocode
+//1.Create a const function course which takes in title, instructor and students as Parameters
+//title:"Is the course title"
+//instructor is an object containing the name of the instructor and their expertise
+//students is an array of student objects each representing a student with name, completionStatus and expertise
+//2.Prototype methods
+//getCompletedStudents(): Filters the students arrayfor those whose conpletionStatus is true and returns their names also
+//countStudentsByExpertise()takes in their field of expertise and counts the students for the specified expertise
+//instructorMessage() uses if...else control flow to output a message based on the number of enrolled students in the specified course
 function Course(title, instructor, students){
     this.title = title;
     this.instructor = instructor;
